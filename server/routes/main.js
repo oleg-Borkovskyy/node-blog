@@ -4,7 +4,16 @@ const router = express.Router()
 
 // routes
 router.get("", (req, res) => {
-    res.send('hello world')
+
+    const locals = {
+        title:'Node JS Blog',
+        description:'NodeJS blog description',
+    }
+
+    res.render('index')
+})
+router.get("/about", (req, res) => {
+    res.render('about')
 })
 
 
